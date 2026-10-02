@@ -24,4 +24,7 @@ public class AppUser extends BaseEntity<Long> {
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Role role;
+
+    @Column(nullable = false)
+    private boolean isActive;
 }
