@@ -13,7 +13,7 @@ import java.math.BigDecimal;
 public class Employee extends BaseEntity<Long> {
 
     @OneToOne
-    @JoinColumn(name = "user_id" ,nullable = false, unique = true)
+    @JoinColumn(name = "user_id", nullable = false, unique = true)
     private AppUser user;
 
     @Column(nullable = false)
@@ -29,7 +29,6 @@ public class Employee extends BaseEntity<Long> {
     private BigDecimal hourlyRate;
 
     private BigDecimal monthlySalary;
-
 
 
 }
