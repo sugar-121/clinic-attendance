@@ -2,9 +2,7 @@ package ir.clinic.attendance.entity;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
@@ -15,6 +13,8 @@ import java.util.List;
 @Setter
 @Getter
 @NoArgsConstructor
+@AllArgsConstructor
+@Builder
 public class Attendance extends BaseEntity<Long> {
 
     @Column(nullable = false)
@@ -35,5 +35,10 @@ public class Attendance extends BaseEntity<Long> {
     @Column
     private String explanation;
 
+
+    public void addWorkSession(WorkSession workSession){
+        workSessions.add(workSession);
+        workSession.setAttendance(this);
+    }
 
 }

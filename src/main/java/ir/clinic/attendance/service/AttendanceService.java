@@ -1,6 +1,8 @@
 package ir.clinic.attendance.service;
 
+import ir.clinic.attendance.entity.WorkSession;
+
 public interface AttendanceService {
 
-    boolean checkIn(long employee);
+    WorkSession checkIn(long employee);
 }
